@@ -5,7 +5,14 @@ import java.awt.Color;
  * Version: 1.0
  * Since: 2025-04-22
  */
-public class Main {
+final class Main {
+    /**
+     * Private constructor to prevent instantiation.
+     * @throws IllegalStateException Utility class.
+     */
+    private Main() {
+        throw new IllegalStateException("Utility Class");
+    }
     /**
      * @param args The command line arguments.
      * The x-coordinate of the balloon.
@@ -16,13 +23,13 @@ public class Main {
 
         balloonA.moveBalloon(24, 12);
         System.out.println("Balloon A moved to: ");
-        System.out.println(balloonA.xPosition);
-        System.out.println(balloonA.yPosition);
+        System.out.println(balloonA.getXPosition());
+        System.out.println(balloonA.getYPosition());
         System.out.println("");
 
         balloonB.moveBalloon(50, 40);
         System.out.println("Balloon B moved to: ");
-        System.out.println(balloonB.xPosition);
-        System.out.println(balloonB.yPosition);
+        System.out.println(balloonB.getXPosition());
+        System.out.println(balloonB.getYPosition());
     }
 }

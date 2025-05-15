@@ -3,37 +3,37 @@ public class Balloon {
     /**
      * The x-coordinate of the balloon.
      */
-    int xPosition;
+    private int xPosition;
     /**
      * The y-coordinate of the balloon.
      */
-    int yPosition;
+    private int yPosition;
     /**
      * The color of the balloon.
      */
-    Color color;
+    private Color color;
     /**
      * The size of the balloon.
      */
-    int size;
+    private int size;
     /**
      * The popped status of the balloon.
      */
-    Boolean popped;
+    private Boolean popped;
     /**
      * Constructor for the Balloon class.
      *
-     * @param xPosition The x-coordinate of the balloon.
-     * @param yPosition The y-coordinate of the balloon.
-     * @param color The color of the balloon.
-     * @param size The size of the balloon.
+     * @param xSpaceP The x-coordinate of the balloon.
+     * @param ySpaceP The y-coordinate of the balloon.
+     * @param colorC The color of the balloon.
+     * @param sizeS The size of the balloon.
      */
-    public Balloon(final int xPosition, final int yPosition,
-            final Color color, final int size) {
-        this.xPosition = xPosition;
-        this.yPosition = yPosition;
-        this.color = color;
-        this.size = size;
+    public Balloon(final int xSpaceP, final int ySpaceP,
+            final Color colorC, final int sizeS) {
+        this.xPosition = xSpaceP;
+        this.yPosition = ySpaceP;
+        this.color = colorC;
+        this.size = sizeS;
         this.popped = false;
     }
     /**
@@ -47,10 +47,50 @@ public class Balloon {
         this.yPosition += ySpaces;
     }
     /**
-     * Pops the balloon.
-     * @param color
+     * Gets the x-coordinate of the balloon.
+     *
+     * @return The x-coordinate of the balloon.
      */
-    public void changeColor(final Color color) {
-        this.color = color;
+    public int getXPosition() {
+        return this.xPosition;
+    }
+    /**
+     * Color of the balloon.
+     *
+     * @return Color of the balloon.
+     */
+    public int getYPosition() {
+        return this.yPosition;
+    }
+    /**
+     * Color of the balloon.
+     *
+     * @return Color of the balloon.
+     */
+    public Color getColor() {
+        return this.color;
+    }
+    /**
+     * Color of the balloon.
+     *
+     * @return Color of the balloon.
+     */
+    public int getSize() {
+        return this.size;
+    }
+    /**
+     * Color of the balloon.
+     *
+     * @return Color of the balloon.
+     */
+    public Boolean getPopped() {
+        return this.popped;
+    }
+    /**
+     * Pops the balloon.
+     * @param colorC
+     */
+    public void changeColor(final Color colorC) {
+        this.color = colorC;
     }
 }
